@@ -16,4 +16,5 @@ Once the GET request is recieved, we then sent back a 200 OK reply
 This then finishes the initiation communication between the client and the server. Now both client and server understand that we will be transmitting a video stream in the OGG format. 
 
 Capturing Video:
-For capturing the content we wish to stream, we decided to use FFMPEG. 
+For capturing the content we wish to stream, we decided to use FFMPEG. FFMPEG is initiated to capture a 640x480 video stream of the webcam device that is located on /dev/video0 . The output stream is stored as out.ogg. This out.ogg is the file that is being served to the client. We open perform a delayed buffering to send the video data to the client.
+
